@@ -1,0 +1,21 @@
+/* Th vh unit stands for viewport height, and is relative to 1% of the height of the viewport.
+Its time to spruce up this project with some CSS */
+body {
+    width: 100%;
+    height: 100vh;
+    /* Now, get rid of the horizontail scroll-bar by setting the body default margin added by some browsers to 0. */
+    margin: 0;
+    /* This is beter.Now make the background wasy on the eyes, by changing the body background-colot to (hex)
+    #1b1b32 Then, to see the text, change the color to (hex) #f5f6f7. */
+    background-color: #1b1b32;
+    color: #f5f6f7;
+}
+/* The rem unit stands for root em, and is relative to the font size of the html element.
+As label element are inline bt default theya re all displayed side bt side on the same line, making their text hard to read.
+To make the appear on seprate lines, add display:block to the label element, and add a margin of 0.5 to seperate them from
+each other. */
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
