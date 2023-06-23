@@ -31,9 +31,9 @@ request body (with method="post")-->
         <fieldset>
             <!-- Users will be allowed to choose either a Personal Account or Bussiness Account -->
             <!--  To do this, within each of the rwo label elements, add on input element with type="radio" -->
-            <label><input type="radio" name="account-type"> Personal Account</label>
-            <label><input type="radio" name="account-type"> Business Account</label>
-            <label><input type="checkbox"  required> I accept the terms and conditions</label>
+            <label for="personal-account"><input id="personal-account" type="radio" name="account-type"> Personal Account</label>
+            <label for="business-account"><input id="business-account" type="radio" name="account-type"> Business Account</label>
+            <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox"  required> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
         </fieldset>
         <!-- To handle the form submission, after the last fieldset element add an input element with the type attribute set to submit and the 
         value set to Submit. -->
