@@ -21,23 +21,40 @@ request body (with method="post")-->
             <!-- To make the form more interactive, add the required attribute to the input elements
             int the first fieldest.
             Noe, if you try to submit the form without filling in the required fields, you will see an error message. -->
-            <label for="first-name">Enter Your First Name: <input id="first-name" type="text" required></label>
-            <label for="last-name">Enter Your Last Name: <input id="last-name" type="text" required></label>
+            <label for="first-name">Enter Your First Name: <input name="first-name" id="first-name" type="text" required></label>
+            <label for="last-name">Enter Your Last Name: <input name="last-name" id="last-name" type="text" required></label>
             <!-- The email type only allows emails with a @ and a . in the dimain. The password type obscures the input , and warns 
             if the site does not use HTTPS. -->
-            <label for="email">Enter Your Email: <input id="email"m, type="email" required></label>
-            <label for="new-password">Create a New Password: <input id="new-password" type="password" pattern="[a-z0-5]{8,}" required></label>
+            <label for="email">Enter Your Email: <input name="e-mail" id="email"m, type="email" required></label>
+            <label for="new-password">Create a New Password: <input name="password" id="new-password" type="password" pattern="[a-z0-5]{8,}" required></label>
         </fieldset>
         <fieldset>
             <!-- Users will be allowed to choose either a Personal Account or Bussiness Account -->
             <!--  To do this, within each of the rwo label elements, add on input element with type="radio" -->
-            <label for="personal-account"><input id="personal-account" type="radio" name="account-type"> Personal Account</label>
-            <label for="business-account"><input id="business-account" type="radio" name="account-type"> Business Account</label>
-            <label for="terms-and-conditions"><input id="terms-and-conditions" type="checkbox"  required> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+            <!-- For the second fieldset you want to input and label text to appear on the same line 
+            ... We will start by giving the input elements im the seocnd fieldset a class of inline. -->
+            <label for="personal-account"><input class="inline" id="personal-account" type="radio" name="account-type"> Personal Account</label>
+            <label for="business-account"><input class="inline" id="business-account" type="radio" name="account-type"> Business Account</label>
+            <label for="terms-and-conditions"><input class="inline" name="terms" id="terms-and-conditions" type="checkbox"  required> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
         </fieldset>
         <!-- To handle the form submission, after the last fieldset element add an input element with the type attribute set to submit and the 
         value set to Submit. -->
-        <fieldset></fieldset> <input type="submit" value="Submit">
+        <fieldset class="last-of-type">
+            <label>Upload a profile picture <input name="file" type="file"></label>
+            <label>Input your age (years): <input name="age" type="number" min="13" max="120"></label>
+            <label>How did you hear about us?<select name="referrer" id="referrer">
+                <option value="">(select one)</option>
+                <option value="1">freeCodeCamp News</option>
+                <option value="2">freeCodeCamp YouTube Channel</option>
+                <option value="3">freeCodeCamp Forum</option>
+                <option value="4">Other</option>
+            </select>
+        </label>
+        <label for="bio">Provide a bio:
+            <textarea name="bio" placeholder="Provide a bio..." name="bio" id="bio" cols="30" rows="3"></textarea>
+        </label>
+        </fieldset>
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>

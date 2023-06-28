@@ -5,10 +5,13 @@ body {
     height: 100vh;
     /* Now, get rid of the horizontail scroll-bar by setting the body default margin added by some browsers to 0. */
     margin: 0;
-    /* This is beter.Now make the background wasy on the eyes, by changing the body background-colot to (hex)
+    /* This is beter.Now make the background wasy on the eyes, by changing the body background-color to (hex)
     #1b1b32 Then, to see the text, change the color to (hex) #f5f6f7. */
     background-color: #1b1b32;
     color: #f5f6f7;
+    /* Changed the font to Tahoma and the font size to 16px in the body*/
+    font-family: Tahoma;
+    font-size: 16px;
 }
 /* The rem unit stands for root em, and is relative to the font size of the html element.
 As label element are inline bt default theya re all displayed side bt side on the same line, making their text hard to read.
@@ -18,4 +21,91 @@ label {
     display: block;
     margin: 0.5rem 0;
 }
+/* Centering the h1 and p elements within the form, */
+h1 , p {
+    margin: 1em auto;
+    text-align: center;
+}
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 60vw;
+    padding: 2em;
+}
+fieldset {
+    /* Adding border-bottom of 3px solid #3b3b4f allows for a bit of seperation to the fieldset. */
+    border: none;
+    border-bottom: 3px solid #3b3b4f;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 0;
+    padding-left: 0;
+}
+/* The border of the last fieldset element looks a little out of place,
+YOu can select the last element of a specific type using the last-of type CSS pseudo-class, like this
+ex: p:last-of-type {} */
+fieldset:last-of-type {
+    border-bottom: none;
+}
+input , textarea, select {
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-height: 2em;
+
+}
+input, textarea {
+     /* To make the input and textarea elements blend in with the backgrtound, set their background-color to #0a0a23,
+    then give them a 1 px solid border with a color of #0a0a23. */
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+
+}
+
+.inline {
+    width: unset;
+    margin-right: 0.5em;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    /*The . inline elemnts were to high on the line to combat this we set the vertical-align property to middle. */
+    vertical-align: middle;
+}
+/* To style the submit button, you can user an attribute selector, which selects an element based on the 
+given attribute value. Here is an example. */
+input[type="submit"]{
+    display: block;
+    width: 60%;
+    min-width: 300px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white
+    
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+a {
+    color: #dfdfe2;
+}
+
+
+
+
+
+
+
+
+
 
